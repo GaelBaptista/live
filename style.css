@@ -1,17 +1,15 @@
-/* =========================================================
+/* =========================
    VARIÁVEIS & BASE
-   ========================================================= */
+   ========================= */
 
 :root {
   --color-primary: #f75c25;
   --color-bg: #111111;
   --color-surface: #1a1a1a;
-  --color-surface-alt: #222222;
   --color-text: #eeeef0;
   --color-muted: #c7c7cf;
   --color-border: #2c2c2c;
   --radius-lg: 18px;
-  --radius-md: 12px;
   --radius-pill: 999px;
   --shadow-soft: 0 18px 40px rgba(0, 0, 0, 0.6);
 }
@@ -30,18 +28,12 @@ body {
 
 body {
   font-family: "Inter", system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
-  background: radial-gradient(circle at top, #222 0, #111 45%, #000 100%);
+  background: var(--color-bg);
   color: var(--color-text);
   -webkit-font-smoothing: antialiased;
 }
 
 /* Layout base */
-
-.page-wrapper {
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-}
 
 .container {
   width: 100%;
@@ -50,71 +42,9 @@ body {
   padding: 0 1.5rem;
 }
 
-/* =========================================================
-   HEADER
-   ========================================================= */
-
-.header {
-  position: sticky;
-  top: 0;
-  z-index: 20;
-  background: rgba(17, 17, 17, 0.96);
-  backdrop-filter: blur(10px);
-  border-bottom: 1px solid rgba(255, 255, 255, 0.04);
-}
-
-.header-content {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 0.9rem 0;
-  gap: 1rem;
-}
-
-.logo {
-  display: flex;
-  align-items: center;
-  gap: 0.6rem;
-}
-
-.logo-mark {
-  background: var(--color-primary);
-  padding: 0.3rem 0.7rem;
-  border-radius: var(--radius-pill);
-  font-size: 0.75rem;
-  font-weight: 700;
-  letter-spacing: 0.06em;
-  text-transform: uppercase;
-  color: #111111;
-}
-
-.logo-text {
-  font-weight: 500;
-  font-size: 0.95rem;
-  color: var(--color-muted);
-}
-
-.nav {
-  display: flex;
-  gap: 1.25rem;
-}
-
-.nav-link {
-  font-size: 0.9rem;
-  text-decoration: none;
-  color: var(--color-muted);
-  opacity: 0.85;
-  transition: opacity 0.2s, color 0.2s;
-}
-
-.nav-link:hover {
-  opacity: 1;
-  color: #ffffff;
-}
-
-/* =========================================================
+/* =========================
    BOTÕES
-   ========================================================= */
+   ========================= */
 
 .btn {
   display: inline-flex;
@@ -142,24 +72,13 @@ body {
   box-shadow: 0 18px 40px rgba(247, 92, 37, 0.75);
 }
 
-.btn-outline {
-  border: 1px solid rgba(238, 238, 240, 0.3);
-  color: var(--color-muted);
-  background: transparent;
-}
-
-.btn-outline:hover {
-  border-color: var(--color-primary);
-  color: var(--color-primary);
-}
-
 .btn-full {
   width: 100%;
 }
 
-/* =========================================================
-   HERO (1ª DOBRA)
-   ========================================================= */
+/* =========================
+   HERO (SEÇÃO PRINCIPAL)
+   ========================= */
 
 .hero {
   padding: 4.5rem 0 3.2rem;
@@ -173,172 +92,8 @@ body {
 }
 
 .hero-left {
-  display: flex;
-  flex-direction: column;
-  gap: 1.5rem;
+  /* espaço reservado para conteúdo futuro */
 }
-
-.pill {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.45rem;
-  padding: 0.2rem 0.85rem;
-  border-radius: var(--radius-pill);
-  font-size: 0.8rem;
-  letter-spacing: 0.06em;
-  text-transform: uppercase;
-  border: 1px solid rgba(238, 238, 240, 0.4);
-  color: var(--color-muted);
-  background: rgba(17, 17, 17, 0.9);
-}
-
-.hero-title {
-  font-size: clamp(2.1rem, 3.4vw, 3rem);
-  line-height: 1.12;
-  margin: 0;
-}
-
-.hero-highlight {
-  color: var(--color-primary);
-}
-
-.hero-subtitle {
-  margin: 0;
-  color: rgba(238, 238, 240, 0.8);
-  font-size: 0.98rem;
-  max-width: 38rem;
-}
-
-.hero-badges {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.6rem;
-}
-
-.hero-badge {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.45rem;
-  padding: 0.35rem 0.8rem;
-  border-radius: var(--radius-pill);
-  border: 1px solid rgba(238, 238, 240, 0.12);
-  background: rgba(26, 26, 26, 0.96);
-  font-size: 0.8rem;
-  color: rgba(238, 238, 240, 0.9);
-}
-
-.hero-context {
-  margin: 0;
-  font-size: 0.95rem;
-  color: rgba(238, 238, 240, 0.85);
-}
-
-/* Riscos */
-
-.hero-risks {
-  display: flex;
-  flex-direction: column;
-  gap: 0.4rem;
-}
-
-.hero-risks-title {
-  margin: 0;
-  font-size: 0.85rem;
-  color: rgba(238, 238, 240, 0.8);
-}
-
-.risk-tags {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.4rem;
-}
-
-.risk-tag {
-  padding: 0.25rem 0.7rem;
-  border-radius: var(--radius-pill);
-  background: rgba(247, 92, 37, 0.12);
-  border: 1px solid rgba(247, 92, 37, 0.45);
-  font-size: 0.8rem;
-  color: var(--color-text);
-}
-
-/* Consequências */
-
-.hero-consequences {
-  border-radius: var(--radius-md);
-  border: 1px solid rgba(255, 81, 81, 0.6);
-  background: radial-gradient(circle at top left, #3a1414, #150707);
-  padding: 0.9rem 1rem;
-}
-
-.consequences-title {
-  margin: 0 0 0.4rem;
-  font-size: 0.9rem;
-}
-
-.consequences-list {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-  font-size: 0.86rem;
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(13rem, 1fr));
-  gap: 0.2rem 0.8rem;
-}
-
-/* CTA & contagem */
-
-.hero-cta-group {
-  display: flex;
-  flex-direction: column;
-  gap: 0.7rem;
-}
-
-.hero-small {
-  font-size: 0.8rem;
-  color: rgba(238, 238, 240, 0.7);
-}
-
-/* Countdown */
-
-.countdown-wrapper {
-  margin-top: 0.2rem;
-}
-
-.countdown-label {
-  font-size: 0.8rem;
-  color: rgba(238, 238, 240, 0.7);
-  margin-bottom: 0.4rem;
-}
-
-.countdown {
-  display: inline-flex;
-  gap: 0.6rem;
-  padding: 0.6rem 0.7rem;
-  border-radius: var(--radius-pill);
-  background: rgba(17, 17, 17, 0.9);
-  border: 1px solid rgba(238, 238, 240, 0.15);
-}
-
-.time-box {
-  min-width: 3.2rem;
-  text-align: center;
-}
-
-.time-box span {
-  display: block;
-  font-weight: 700;
-  font-size: 1.1rem;
-}
-
-.time-box small {
-  font-size: 0.65rem;
-  text-transform: uppercase;
-  letter-spacing: 0.06em;
-  color: rgba(238, 238, 240, 0.7);
-}
-
-/* HERO – FORM / RIGHT SIDE */
 
 .hero-right {
   position: relative;
@@ -346,6 +101,10 @@ body {
   flex-direction: column;
   gap: 0.8rem;
 }
+
+/* =========================
+   CARD DO FORMULÁRIO
+   ========================= */
 
 .card {
   border-radius: var(--radius-lg);
@@ -378,6 +137,10 @@ body {
   margin-top: 0;
   margin-bottom: 1.3rem;
 }
+
+/* =========================
+   FORMULÁRIO
+   ========================= */
 
 .form-group {
   margin-bottom: 0.9rem;
@@ -433,559 +196,21 @@ body {
   color: #9bffb0;
 }
 
-/* mini bloco do especialista abaixo do form */
-
-.hero-speaker-mini {
-  display: flex;
-  align-items: center;
-  gap: 0.8rem;
-}
-
-.speaker-avatar-photo {
-  width: 94px;
-  height: 94px;
-  border-radius: 999px;
-  overflow: hidden;
-  border: 2px solid rgba(247, 92, 37, 0.7);
-}
-
-.speaker-avatar-photo img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-
-.speaker-name {
-  margin: 0;
-  font-size: 0.96rem;
-  font-weight: 600;
-}
-
-.speaker-role {
-  margin: 0;
-  font-size: 0.8rem;
-  color: rgba(238, 238, 240, 0.7);
-}
-
-/* Badge de live (se quiser usar em algum lugar) */
-
-.badge-live {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.4rem;
-  font-size: 0.8rem;
-  font-weight: 600;
-  text-transform: uppercase;
-  letter-spacing: 0.08em;
-  background: rgba(247, 92, 37, 0.12);
-  color: var(--color-primary);
-  border-radius: var(--radius-pill);
-  padding: 0.25rem 0.7rem;
-}
-
-/* =========================================================
-   SEÇÕES GERAIS / DOBRAS
-   ========================================================= */
-
-/* seção “padrão” se for usada */
-.section {
-  padding: 3.2rem 0;
-}
-
-/* mas aqui usamos .section-light e .section-white, ambas ESCURAS */
-
-.section-light,
-.section-white {
-  background: #111111;
-  color: var(--color-text);
-  padding: 3.2rem 0;
-}
-
-/* grid duas colunas tipo Conversão Extrema */
-
-.section-two-col {
-  display: grid;
-  grid-template-columns: minmax(0, 1.4fr) minmax(0, 1.2fr);
-  gap: 2.5rem;
-  align-items: center;
-}
-
-.section-two-col.section-reverse {
-  grid-template-columns: minmax(0, 1.2fr) minmax(0, 1.4fr);
-}
-
-.section-two-col.section-reverse .section-image {
-  order: -1;
-}
-
-/* textos dessas seções */
-
-.section-text h2 {
-  margin-top: 0;
-  margin-bottom: 0.75rem;
-  font-size: 1.7rem;
-  color: var(--color-text);
-}
-
-.section-text p {
-  font-size: 0.95rem;
-  line-height: 1.6;
-  color: #cccccc;
-}
-
-.section-text-highlight {
-  margin-top: 0.8rem;
-  font-weight: 600;
-  color: #ffffff;
-}
-
-/* imagens */
-
-.section-image img {
-  width: 100%;
-  border-radius: 18px;
-  box-shadow: 0 18px 40px rgba(0, 0, 0, 0.7);
-  object-fit: cover;
-  border: 1px solid #1f1f1f;
-}
-
-/* =========================================================
-   LISTAS EM DUAS COLUNAS (“Funciona pra mim?”)
-   ========================================================= */
-
-.list-columns {
-  display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 0.4rem 1.4rem;
-  margin: 0.9rem 0 0.4rem;
-}
-
-.list-columns ul {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-}
-
-.list-columns li {
-  font-size: 0.9rem;
-  padding-left: 0.9rem;
-  position: relative;
-  margin-bottom: 0.25rem;
-  color: #dddddd;
-}
-
-.list-columns li::before {
-  content: "";
-  position: absolute;
-  left: 0;
-  top: 7px;
-  width: 6px;
-  height: 6px;
-  background: var(--color-primary);
-  border-radius: 50%;
-}
-
-/* =========================================================
-   PILARES
-   ========================================================= */
-
-.section-title-center {
-  text-align: center;
-  margin: 0 0 0.4rem;
-  color: var(--color-text);
-}
-
-.section-subtitle-center {
-  text-align: center;
-  margin: 0 auto 1.8rem;
-  max-width: 34rem;
-  font-size: 0.95rem;
-  color: #c0c0c0;
-}
-
-.pillars-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
-  gap: 1rem;
-}
-
-.pillar-card {
-  background: var(--color-surface);
-  border-radius: 16px;
-  border: 1px solid var(--color-border);
-  padding: 1rem 1.1rem;
-  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.6);
-}
-
-.pillar-card h3 {
-  margin: 0 0 0.4rem;
-  font-size: 1rem;
-  color: #ffffff;
-}
-
-.pillar-card p {
-  margin: 0;
-  font-size: 0.88rem;
-  color: #cccccc;
-}
-
-/* =========================================================
-   GARANTIA / RISCO ZERO
-   ========================================================= */
-
-.guarantee-block {
-  text-align: center;
-  max-width: 680px;
-  margin: 0 auto;
-}
-
-.guarantee-badge {
-  display: inline-flex;
-  flex-wrap: wrap;
-  gap: 0.4rem;
-  margin-bottom: 0.8rem;
-}
-
-.guarantee-badge span {
-  padding: 0.3rem 0.7rem;
-  border-radius: 999px;
-  border: 1px solid var(--color-primary);
-  font-size: 0.8rem;
-  color: var(--color-primary);
-}
-
-.guarantee-block h2 {
-  margin: 0 0 0.7rem;
-  color: #ffffff;
-}
-
-.guarantee-block p {
-  margin: 0 0 0.5rem;
-  font-size: 0.95rem;
-  color: #cccccc;
-}
-
-/* =========================================================
-   ESPECIALISTA & DR. ESTÁGIO
-   ========================================================= */
-
-.speaker-card-main {
-  padding: 1.6rem 1.6rem;
-}
-
-.speaker-main {
-  display: flex;
-  gap: 1.4rem;
-  align-items: center;
-}
-
-.speaker-photo-wrapper {
-  width: 390px;
-  height: 190px;
-  border-radius: 18px;
-  overflow: hidden;
-  border: 2px solid rgba(247, 92, 37, 0.85);
-}
-
-.speaker-photo {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  border-radius: 14px;
-  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.8);
-}
-
-.speaker-title {
-  font-weight: 600;
-  margin: 0.2rem 0 0.3rem;
-}
-
-.speaker-description {
-  margin: 0;
-  font-size: 0.9rem;
-}
-
-.speaker-list {
-  list-style: none;
-  padding: 0;
-  margin: 0.4rem 0 0.7rem;
-  font-size: 0.88rem;
-}
-
-.speaker-list li {
-  display: flex;
-  align-items: center;
-  gap: 0.4rem;
-}
-
-.speaker-experience {
-  margin: 0;
-  font-size: 0.9rem;
-  color: #d0d0d0;
-}
-
-/* card Dr. Estágio */
-
-.card-dr h3 {
-  margin-top: 0;
-  margin-bottom: 0.5rem;
-}
-
-.dr-list {
-  list-style: none;
-  padding: 0;
-  margin: 0.7rem 0 0.8rem;
-  font-size: 0.9rem;
-}
-
-.dr-list li {
-  display: flex;
-  align-items: center;
-  gap: 0.4rem;
-}
-
-.dr-extra {
-  margin: 0;
-  font-size: 0.9rem;
-}
-
-/* =========================================================
-   “ESSA LIVE É PARA VOCÊ” & DETALHES DO EVENTO
-   ========================================================= */
-
-.card-who h2 {
-  margin-top: 0;
-  margin-bottom: 0.7rem;
-}
-
-.who-list {
-  list-style: none;
-  padding: 0;
-  margin: 0 0 1.2rem;
-  font-size: 0.9rem;
-}
-
-.who-list li {
-  display: flex;
-  align-items: flex-start;
-  gap: 0.4rem;
-}
-
-.event-tags {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(13rem, 1fr));
-  gap: 0.4rem 0.8rem;
-  margin-top: 0.6rem;
-}
-
-.event-tag {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.4rem;
-  font-size: 0.85rem;
-  padding: 0.35rem 0.7rem;
-  border-radius: var(--radius-pill);
-  border: 1px solid rgba(238, 238, 240, 0.12);
-  background: rgba(17, 17, 17, 0.95);
-}
-
-/* =========================================================
-   FAQ
-   ========================================================= */
-
-.faq-container {
-  max-width: 760px;
-  margin: 0 auto;
-  text-align: center;
-}
-
-.faq-intro {
-  margin: 0 0 0.4rem;
-  font-size: 0.92rem;
-  color: #c0c0c0;
-}
-
-.faq-container h2 {
-  margin: 0 0 1rem;
-  color: #ffffff;
-}
-
-.faq-list {
-  text-align: left;
-  margin-bottom: 1.5rem;
-}
-
-.faq-item {
-  border: 1px solid var(--color-border);
-  border-radius: 10px;
-  margin-bottom: 0.6rem;
-  overflow: hidden;
-  background: var(--color-surface);
-}
-
-.faq-question {
-  width: 100%;
-  text-align: left;
-  padding: 0.7rem 0.9rem;
-  font-size: 0.9rem;
-  background: transparent;
-  border: none;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  cursor: pointer;
-  color: #ffffff;
-}
-
-.faq-toggle {
-  font-weight: 700;
-  color: var(--color-primary);
-  transition: 0.2s;
-}
-
-.faq-answer {
-  max-height: 0;
-  overflow: hidden;
-  padding: 0 0.9rem;
-  transition: max-height 0.25s ease, padding-bottom 0.25s ease;
-}
-
-.faq-answer p {
-  margin: 0.5rem 0 0.8rem;
-  font-size: 0.88rem;
-  color: #cccccc;
-}
-
-.faq-item.active .faq-answer {
-  max-height: 160px;
-  padding-bottom: 0.6rem;
-}
-
-.faq-item.active .faq-toggle {
-  transform: rotate(45deg);
-}
-
-.faq-cta {
-  display: inline-flex;
-}
-
-/* =========================================================
-   FOOTER
-   ========================================================= */
-
-.footer {
-  margin-top: auto;
-  padding: 1.8rem 0 2.2rem;
-  border-top: 1px solid rgba(238, 238, 240, 0.08);
-  background: #111111;
-}
-
-.footer-content {
-  display: flex;
-  flex-direction: column;
-  gap: 0.3rem;
-}
-
-.footer p {
-  margin: 0;
-  font-size: 0.78rem;
-  color: rgba(238, 238, 240, 0.7);
-}
-
-.footer-note {
-  color: rgba(238, 238, 240, 0.5);
-}
-
-/* =========================================================
-   ÍCONES SIMPLES (USANDO CARACTERES)
-   ========================================================= */
-
-.icon {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  width: 18px;
-  height: 18px;
-  border-radius: 999px;
-  border: 1px solid rgba(238, 238, 240, 0.4);
-  font-size: 10px;
-}
-
-.icon-check::before {
-  content: "✔";
-}
-
-.icon-x::before {
-  content: "✖";
-}
-
-.icon-calendar::before {
-  content: "📅";
-}
-
-.icon-clock::before {
-  content: "⏰";
-}
-
-.icon-online::before {
-  content: "📡";
-}
-
-.icon-certificate::before {
-  content: "🎓";
-}
-
-.icon-live::before {
-  content: "▶";
-}
-
-.icon-alert::before {
-  content: "!";
-  font-weight: 700;
-}
-
-.icon-dot::before {
-  content: "•";
-}
-
-.icon-warning-small::before {
-  content: "!";
-}
-
-/* =========================================================
+/* =========================
    RESPONSIVO
-   ========================================================= */
+   ========================= */
 
 @media (max-width: 960px) {
-  .hero-grid,
-  .section-two-col,
-  .section-two-col.section-reverse {
+  .hero-grid {
     grid-template-columns: minmax(0, 1fr);
   }
 
   .hero-right {
     order: -1;
   }
-
-  .section-two-col.section-reverse .section-image {
-    order: -1;
-  }
-
-  .speaker-main {
-    flex-direction: column;
-    align-items: flex-start;
-  }
 }
 
 @media (max-width: 720px) {
-  .header-content {
-    gap: 0.8rem;
-  }
-
-  .nav {
-    display: none;
-  }
-
   .hero {
     padding-top: 3.2rem;
   }

@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Live NR-1 para Supermercados | Dr. Estágio</title>
 
-    <!-- Fonte -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -15,604 +14,136 @@
 
     <link rel="stylesheet" href="style.css" />
   </head>
+
   <body>
-    <div class="page-wrapper">
-      <!-- HEADER -->
-      <header class="header">
-        <div class="container header-content">
-          <div class="logo">
-            <span class="logo-mark">NR-1</span>
-            <span class="logo-text">Para Supermercados</span>
-          </div>
-
-          <nav class="nav">
-            <a href="#nr1" class="nav-link">NR-1</a>
-            <a href="#sobre-live" class="nav-link">Sobre a live</a>
-            <a href="#pilares" class="nav-link">Pilares</a>
-            <a href="#especialista" class="nav-link">Especialista</a>
-            <a href="#faq" class="nav-link">FAQ</a>
-          </nav>
-
-          <a href="#inscricao" class="btn btn-outline">Garanta sua vaga</a>
-        </div>
-      </header>
-
-      <main>
-        <!-- ========================================================= -->
-        <!-- 1ª DOBRA – HERO + FORM (CONVERSÃO RÁPIDA)                 -->
-        <!-- ========================================================= -->
-        <section class="hero" id="nr1">
-          <div class="container hero-grid">
-            <!-- Lado esquerdo -->
-            <div class="hero-left">
-              <span class="pill">
-                <span class="icon icon-warning-small"></span>
-                Live estratégica para supermercados
-              </span>
-
-              <h1 class="hero-title">
-                NR-1 para supermercados:
-                <span class="hero-highlight">
-                  o que você precisa fazer antes de maio/2026
-                </span>
-              </h1>
-
-              <p class="hero-subtitle">
-                Live gratuita e exclusiva para donos, gestores e RH de
-                supermercados, com o psicólogo especialista
-                <strong>Anderson Sales</strong>.
+    <main>
+      <section class="hero" id="nr1">
+        <div class="container hero-center">
+          <div class="hero-right" id="inscricao">
+            <div class="card form-card">
+              <h3>Inscreva-se agora e prepare sua empresa para a NR-1</h3>
+              <p class="form-subtitle">
+                Preencha seus dados para receber o link da live e o certificado
+                após o evento.
               </p>
 
-              <div class="hero-badges">
-                <div class="hero-badge">
-                  <span class="icon icon-calendar"></span>
-                  <span>Dia 16 de dezembro</span>
+              <form id="liveForm" novalidate>
+                <div class="form-group">
+                  <label for="name">Nome completo</label>
+                  <input
+                    type="text"
+                    id="name"
+                    name="name"
+                    placeholder="Digite seu nome"
+                    required
+                  />
+                  <small class="error-message" data-for="name"></small>
                 </div>
-                <div class="hero-badge">
-                  <span class="icon icon-online"></span>
-                  <span>Evento 100% online</span>
+
+                <div class="form-group">
+                  <label for="email">E-mail</label>
+                  <input
+                    type="email"
+                    id="email"
+                    name="email"
+                    placeholder="seuemail@exemplo.com"
+                    required
+                  />
+                  <small class="error-message" data-for="email"></small>
                 </div>
-                <div class="hero-badge">
-                  <span class="icon icon-certificate"></span>
-                  <span>Certificado incluso</span>
+
+                <div class="form-group">
+                  <label for="whatsapp">WhatsApp</label>
+                  <input
+                    type="tel"
+                    id="whatsapp"
+                    name="whatsapp"
+                    placeholder="(00) 00000-0000"
+                    required
+                  />
+                  <small class="error-message" data-for="whatsapp"></small>
                 </div>
-              </div>
 
-              <p class="hero-context">
-                A <strong>NR-1 entra em vigor em maio de 2026</strong> — seu
-                supermercado está pronto? A atualização traz mudanças profundas
-                para o varejo, principalmente na exigência de gestão de
-                <strong>Riscos Psicossociais</strong>.
-              </p>
-
-              <div class="hero-risks">
-                <p class="hero-risks-title">
-                  Entre os riscos que precisam de atenção:
-                </p>
-                <div class="risk-tags">
-                  <span class="risk-tag">Assédio moral</span>
-                  <span class="risk-tag">Sobrecarga</span>
-                  <span class="risk-tag">Pressão emocional</span>
-                  <span class="risk-tag">Conflitos internos</span>
-                  <span class="risk-tag">Clima organizacional</span>
-                  <span class="risk-tag">Metas abusivas</span>
+                <div class="form-group">
+                  <label for="cnpj">CNPJ da empresa</label>
+                  <input
+                    type="text"
+                    id="cnpj"
+                    name="cnpj"
+                    placeholder="00.000.000/0000-00"
+                    required
+                  />
+                  <small class="error-message" data-for="cnpj"></small>
                 </div>
-              </div>
 
-              <div class="hero-consequences">
-                <p class="consequences-title">
-                  Se sua empresa não souber identificar, tratar e comprovar
-                  ações preventivas, poderá enfrentar:
-                </p>
-                <ul class="consequences-list">
-                  <li><span class="icon icon-x"></span> Multas trabalhistas</li>
-                  <li>
-                    <span class="icon icon-x"></span> Reclamações de
-                    colaboradores
-                  </li>
-                  <li>
-                    <span class="icon icon-x"></span> Aumento de adoecimentos
-                  </li>
-                  <li><span class="icon icon-x"></span> Processos judiciais</li>
-                  <li>
-                    <span class="icon icon-x"></span> Desgaste com fiscalização
-                  </li>
-                </ul>
-              </div>
+                <!-- NOVO CAMPO – ESTADO -->
+                <div class="form-group">
+                  <label for="estado">Estado (UF)</label>
+                  <select id="estado" name="estado" required>
+                    <option value="">Selecione seu estado</option>
+                    <option value="AC">AC</option>
+                    <option value="AL">AL</option>
+                    <option value="AP">AP</option>
+                    <option value="AM">AM</option>
+                    <option value="BA">BA</option>
+                    <option value="CE">CE</option>
+                    <option value="DF">DF</option>
+                    <option value="ES">ES</option>
+                    <option value="GO">GO</option>
+                    <option value="MA">MA</option>
+                    <option value="MT">MT</option>
+                    <option value="MS">MS</option>
+                    <option value="MG">MG</option>
+                    <option value="PA">PA</option>
+                    <option value="PB">PB</option>
+                    <option value="PR">PR</option>
+                    <option value="PE">PE</option>
+                    <option value="PI">PI</option>
+                    <option value="RJ">RJ</option>
+                    <option value="RN">RN</option>
+                    <option value="RS">RS</option>
+                    <option value="RO">RO</option>
+                    <option value="RR">RR</option>
+                    <option value="SC">SC</option>
+                    <option value="SP">SP</option>
+                    <option value="SE">SE</option>
+                    <option value="TO">TO</option>
+                  </select>
+                  <small class="error-message" data-for="estado"></small>
+                </div>
 
-              <div class="hero-cta-group">
-                <a href="#inscricao" class="btn btn-primary">
+                <div class="form-group">
+                  <label for="role">Seu cargo</label>
+                  <select id="role" name="role" required>
+                    <option value="">Selecione uma opção</option>
+                    <option value="dono">Dono(a) de supermercado</option>
+                    <option value="gestor">Gestor(a)</option>
+                    <option value="rh">RH / DP</option>
+                    <option value="supervisor">Supervisor(a)</option>
+                    <option value="outro">Outro</option>
+                  </select>
+                  <small class="error-message" data-for="role"></small>
+                </div>
+
+                <button type="submit" class="btn btn-primary btn-full">
                   Quero participar da live
-                </a>
-                <p class="hero-small">
-                  Vagas limitadas para garantir a qualidade da experiência.
-                </p>
-              </div>
-
-              <div class="countdown-wrapper">
-                <p class="countdown-label">Contagem regressiva para a live</p>
-                <div class="countdown" id="countdown">
-                  <div class="time-box">
-                    <span id="days">00</span>
-                    <small>Dias</small>
-                  </div>
-                  <div class="time-box">
-                    <span id="hours">00</span>
-                    <small>Horas</small>
-                  </div>
-                  <div class="time-box">
-                    <span id="minutes">00</span>
-                    <small>Min</small>
-                  </div>
-                  <div class="time-box">
-                    <span id="seconds">00</span>
-                    <small>Seg</small>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <!-- Lado direito – Form principal -->
-            <div class="hero-right" id="inscricao">
-              <div class="card form-card">
-                <h3>Inscreva-se agora e prepare sua empresa para a NR-1</h3>
-                <p class="form-subtitle">
-                  Preencha seus dados para receber o link da live e o
-                  certificado após o evento.
-                </p>
-
-                <form id="liveForm" novalidate>
-                  <div class="form-group">
-                    <label for="name">Nome completo</label>
-                    <input
-                      type="text"
-                      id="name"
-                      name="name"
-                      placeholder="Digite seu nome"
-                      required
-                    />
-                    <small class="error-message" data-for="name"></small>
-                  </div>
-
-                  <div class="form-group">
-                    <label for="email">E-mail</label>
-                    <input
-                      type="email"
-                      id="email"
-                      name="email"
-                      placeholder="seuemail@exemplo.com"
-                      required
-                    />
-                    <small class="error-message" data-for="email"></small>
-                  </div>
-
-                  <div class="form-group">
-                    <label for="whatsapp">WhatsApp</label>
-                    <input
-                      type="tel"
-                      id="whatsapp"
-                      name="whatsapp"
-                      placeholder="(00) 00000-0000"
-                      required
-                    />
-                    <small class="error-message" data-for="whatsapp"></small>
-                  </div>
-
-                  <div class="form-group">
-                    <label for="cnpj">CNPJ da empresa</label>
-                    <input
-                      type="text"
-                      id="cnpj"
-                      name="cnpj"
-                      placeholder="00.000.000/0000-00"
-                      required
-                    />
-                    <small class="error-message" data-for="cnpj"></small>
-                  </div>
-
-                  <div class="form-group">
-                    <label for="role">Seu cargo</label>
-                    <select id="role" name="role" required>
-                      <option value="">Selecione uma opção</option>
-                      <option value="dono">Dono(a) de supermercado</option>
-                      <option value="gestor">Gestor(a)</option>
-                      <option value="rh">RH / DP</option>
-                      <option value="supervisor">Supervisor(a)</option>
-                      <option value="outro">Outro</option>
-                    </select>
-                    <small class="error-message" data-for="role"></small>
-                  </div>
-
-                  <button type="submit" class="btn btn-primary btn-full">
-                    Quero participar da live
-                  </button>
-
-                  <p class="form-footnote">
-                    Ao se inscrever, você concorda em receber comunicações sobre
-                    este evento.
-                  </p>
-
-                  <p class="form-success" id="formSuccess" hidden>
-                    Inscrição enviada com sucesso! Em breve você receberá o link
-                    da live.
-                  </p>
-                </form>
-              </div>
-
-              <div class="hero-speaker-mini">
-                <div class="speaker-avatar-photo">
-                  <!-- Trocar por foto real do Anderson -->
-                  <img
-                    src="assets/anderson-sales-foto.png"
-                    alt="Psicólogo Anderson Sales"
-                  />
-                </div>
-                <div>
-                  <p class="speaker-name">Psicólogo Anderson Sales</p>
-                  <p class="speaker-role">
-                    Especialista em riscos psicossociais no varejo e saúde
-                    emocional do trabalhador.
-                  </p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        <!-- ========================================================= -->
-        <!-- 2ª DOBRA – "O que é a Live NR-1?" (tipo sessão 1 do print) -->
-        <!-- ========================================================= -->
-        <section class="section-light" id="sobre-live">
-          <div class="container section-two-col">
-            <div class="section-text">
-              <h2>O que é a Live NR-1 para Supermercados?</h2>
-              <p>
-                É uma aula ao vivo, prática e direta, criada para donos,
-                gestores e RH que precisam entender como a NR-1 vai impactar o
-                dia a dia do supermercado até maio de 2026.
-              </p>
-              <p>
-                Em vez de explicações genéricas, vamos transformar a norma em
-                decisões concretas: o que muda no PGR, no GRO, na gestão de
-                riscos psicossociais e no jeito de organizar sua equipe.
-              </p>
-              <p>
-                Você vai sair da live com uma visão clara do que precisa
-                ajustar, por onde começar e como envolver sua equipe sem parar a
-                operação.
-              </p>
-              <p class="section-text-highlight">
-                Ideal para quem quer reduzir riscos, evitar multas e fortalecer
-                a saúde emocional dos times — com segurança jurídica.
-              </p>
-            </div>
-
-            <div class="section-image">
-              <!-- Trocar por imagem real depois -->
-              <img
-                src="assets/nr1.gif"
-                alt="Psicólogo Anderson Sales apresentando a live NR-1"
-              />
-            </div>
-          </div>
-        </section>
-
-        <!-- ========================================================= -->
-        <!-- 3ª DOBRA – "Funciona pra mim?" (como no print)             -->
-        <!-- ========================================================= -->
-        <section class="section-white">
-          <div class="container section-two-col section-reverse">
-            <div class="section-image">
-              <!-- Imagem de tela / dashboard / supermercado -->
-              <img
-                src="assets/supermarkt.jpg"
-                alt="Ilustração de operação de supermercado com NR-1"
-              />
-            </div>
-
-            <div class="section-text">
-              <h2>Funciona para o meu supermercado?</h2>
-              <p>
-                A live foi pensada para qualquer operação de varejo alimentar
-                que lida com ritmo acelerado, pressão por resultados e equipes
-                sob alta demanda.
-              </p>
-
-              <div class="list-columns">
-                <ul>
-                  <li>Redes de supermercados</li>
-                  <li>Lojas de bairro em crescimento</li>
-                  <li>Unidades com frente de caixa intensa</li>
-                  <li>Equipes enxutas com alta rotatividade</li>
-                </ul>
-                <ul>
-                  <li>Empresas com histórico de afastamentos</li>
-                  <li>RHs sobrecarregados</li>
-                  <li>Gestores que acumulam funções</li>
-                  <li>Empresas se preparando para fiscalizações</li>
-                </ul>
-              </div>
-
-              <p class="section-text-highlight">
-                Se você quer organizar a casa antes de 2026, sem parar a
-                operação, essa live é para você.
-              </p>
-            </div>
-          </div>
-        </section>
-
-        <!-- ========================================================= -->
-        <!-- 4ª DOBRA – PILARES (tipo "5 pilares" do print)            -->
-        <!-- ========================================================= -->
-        <section class="section-light" id="pilares">
-          <div class="container">
-            <h2 class="section-title-center">
-              Os pilares da Live NR-1 para Supermercados
-            </h2>
-            <p class="section-subtitle-center">
-              Tudo organizado em blocos claros para você aplicar com
-              objetividade, sem perder tempo com teorias que não saem do papel.
-            </p>
-
-            <div class="pillars-grid">
-              <div class="pillar-card">
-                <h3>1. Entendendo a NR-1 na prática</h3>
-                <p>
-                  O que muda em 2026, quais são as exigências reais e o que a
-                  fiscalização vai olhar primeiro.
-                </p>
-              </div>
-              <div class="pillar-card">
-                <h3>2. Riscos psicossociais no varejo</h3>
-                <p>
-                  Como identificar assédio, sobrecarga, conflitos e pressão
-                  emocional no dia a dia da loja.
-                </p>
-              </div>
-              <div class="pillar-card">
-                <h3>3. PGR, GRO e documentação</h3>
-                <p>
-                  Como organizar evidências, registros e planos de ação focados
-                  na realidade do supermercado.
-                </p>
-              </div>
-              <div class="pillar-card">
-                <h3>4. Equipe, escala e sobrecarga</h3>
-                <p>
-                  Como ajustar funções, reorganizar tarefas e reduzir pressão
-                  sem aumentar custo fixo.
-                </p>
-              </div>
-              <div class="pillar-card">
-                <h3>5. Programa de Estágio como aliado</h3>
-                <p>
-                  Como usar estagiários de forma estratégica para aliviar a
-                  operação e cumprir a NR-1 com segurança.
-                </p>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        <!-- ========================================================= -->
-        <!-- 5ª DOBRA – RISCO ZERO / GARANTIA (adaptado para live)     -->
-        <!-- ========================================================= -->
-        <section class="section-white">
-          <div class="container guarantee-block">
-            <div class="guarantee-badge">
-              <span>100% online</span>
-              <span>Certificado incluso</span>
-              <span>Conteúdo prático</span>
-            </div>
-
-            <h2>Risco zero para você e para sua equipe</h2>
-            <p>
-              A live é totalmente gratuita. Você não assume nenhum compromisso
-              comercial, mas sai com clareza sobre o que precisa ser feito antes
-              de maio de 2026.
-            </p>
-            <p>
-              Caso decida avançar depois com treinamentos aprofundados ou
-              consultoria, a Dr. Estágio terá condições especiais para
-              participantes da live.
-            </p>
-
-            <a href="#inscricao" class="btn btn-primary">
-              Quero garantir minha vaga gratuita
-            </a>
-          </div>
-        </section>
-
-        <!-- ========================================================= -->
-        <!-- 6ª DOBRA – ESPECIALISTA + DR. ESTÁGIO (autoridade)        -->
-        <!-- ========================================================= -->
-        <section class="section-light" id="especialista">
-          <div class="container section-two-col">
-            <div class="card speaker-card-main">
-              <div class="speaker-main">
-                <div class="speaker-photo-wrapper">
-                  <!-- Substituir por foto real -->
-                  <img
-                    src="assets/anderson-sales-foto.png"
-                    alt="Psicólogo Anderson Sales"
-                    class="speaker-photo"
-                  />
-                </div>
-                <div>
-                  <h2>Quem é Anderson Sales?</h2>
-                  <p class="speaker-title">
-                    Psicólogo especialista em varejo supermercadista
-                  </p>
-                  <p class="speaker-description">
-                    Atua há mais de 10 anos com:
-                  </p>
-                  <ul class="speaker-list">
-                    <li>
-                      <span class="icon icon-dot"></span> comportamento
-                      organizacional
-                    </li>
-                    <li>
-                      <span class="icon icon-dot"></span> riscos psicossociais
-                      no varejo
-                    </li>
-                    <li>
-                      <span class="icon icon-dot"></span> saúde emocional do
-                      trabalhador
-                    </li>
-                    <li>
-                      <span class="icon icon-dot"></span> gestão de equipes em
-                      supermercados
-                    </li>
-                  </ul>
-                  <p class="speaker-experience">
-                    Já acompanhou equipes de diferentes redes, ajudando a
-                    reduzir adoecimentos, melhorar o clima organizacional e
-                    preparar empresas para fiscalizações.
-                  </p>
-                </div>
-              </div>
-            </div>
-
-            <div class="card card-dr">
-              <h3>Por que a Dr. Estágio está promovendo este evento?</h3>
-              <p>
-                A Dr. Estágio é especialista em varejo supermercadista há mais
-                de uma década. Apoiamos equipes de RH de ponta a ponta com:
-              </p>
-
-              <ul class="dr-list">
-                <li>
-                  <span class="icon icon-check"></span> triagem e recrutamento
-                </li>
-                <li>
-                  <span class="icon icon-check"></span> programa de estágio
-                  especializado
-                </li>
-                <li>
-                  <span class="icon icon-check"></span> qualificação
-                  profissional
-                </li>
-                <li>
-                  <span class="icon icon-check"></span> consultorias de
-                  adequação
-                </li>
-                <li>
-                  <span class="icon icon-check"></span> treinamentos
-                  comportamentais
-                </li>
-              </ul>
-
-              <p class="dr-extra">
-                Agora, ampliamos nossa atuação com
-                <strong>Treinamento NR-1 para supermercados</strong>, conectando
-                saúde emocional, segurança jurídica e organização de equipe.
-              </p>
-            </div>
-          </div>
-        </section>
-
-        <!-- ========================================================= -->
-        <!-- 7ª DOBRA – FAQ (tipo o print com perguntas frequentes)    -->
-        <!-- ========================================================= -->
-        <section class="section-white" id="faq">
-          <div class="container faq-container">
-            <p class="faq-intro">
-              Ficou com alguma dúvida? Sua resposta pode estar aqui:
-            </p>
-            <h2>Perguntas Frequentes</h2>
-
-            <div class="faq-list">
-              <div class="faq-item">
-                <button class="faq-question">
-                  A live é 100% online?
-                  <span class="faq-toggle">+</span>
                 </button>
-                <div class="faq-answer">
-                  <p>
-                    Sim. A transmissão é totalmente online e você poderá
-                    acompanhar de qualquer lugar, pelo computador ou celular,
-                    com acesso ao link enviado após a inscrição.
-                  </p>
-                </div>
-              </div>
 
-              <div class="faq-item">
-                <button class="faq-question">
-                  Vai ter certificado de participação?
-                  <span class="faq-toggle">+</span>
-                </button>
-                <div class="faq-answer">
-                  <p>
-                    Sim. Enviaremos um certificado digital para os participantes
-                    após a realização da live, com carga horária e tema do
-                    encontro.
-                  </p>
-                </div>
-              </div>
+                <p class="form-footnote">
+                  Ao se inscrever, você concorda em receber comunicações sobre
+                  este evento.
+                </p>
 
-              <div class="faq-item">
-                <button class="faq-question">
-                  A live é só para grandes redes de supermercados?
-                  <span class="faq-toggle">+</span>
-                </button>
-                <div class="faq-answer">
-                  <p>
-                    Não. O conteúdo foi pensado tanto para grandes redes quanto
-                    para lojas independentes que querem se organizar antes de
-                    2026.
-                  </p>
-                </div>
-              </div>
-
-              <div class="faq-item">
-                <button class="faq-question">
-                  Vai ter replay da live?
-                  <span class="faq-toggle">+</span>
-                </button>
-                <div class="faq-answer">
-                  <p>
-                    A prioridade é para quem acompanha ao vivo, mas os inscritos
-                    podem receber acesso temporário à gravação, conforme
-                    disponibilidade da Dr. Estágio.
-                  </p>
-                </div>
-              </div>
-
-              <div class="faq-item">
-                <button class="faq-question">
-                  Tem algum custo ou compromisso comercial?
-                  <span class="faq-toggle">+</span>
-                </button>
-                <div class="faq-answer">
-                  <p>
-                    Não. A live é gratuita. Caso você queira avançar depois com
-                    treinamentos ou consultoria, nossa equipe comercial poderá
-                    apresentar propostas.
-                  </p>
-                </div>
-              </div>
+                <p class="form-success" id="formSuccess" hidden>
+                  Inscrição enviada com sucesso! Em breve você receberá o link
+                  da live.
+                </p>
+              </form>
             </div>
-
-            <a href="#inscricao" class="btn btn-primary faq-cta">
-              Quero garantir minha vaga na live
-            </a>
           </div>
-        </section>
-      </main>
-
-      <!-- FOOTER -->
-      <footer class="footer">
-        <div class="container footer-content">
-          <p>
-            © <span id="year"></span> Dr. Estágio · Live NR-1 para
-            Supermercados. Todos os direitos reservados.
-          </p>
-          <p class="footer-note">
-            Ajuste datas, horários e imagens conforme a sua programação oficial.
-          </p>
         </div>
-      </footer>
-    </div>
+      </section>
+    </main>
 
     <script src="script.js"></script>
   </body>
